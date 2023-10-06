@@ -1,0 +1,21 @@
+{% extends 'eshop/base.html' %}
+
+{% block title%}
+    Product # {{ product.pk }}
+{% endblock %}
+
+{% block body %}
+{% load static %}
+    <h1>
+        <div>Product <strong>{{product.title}}</strong></div>
+    </h1>
+        <div> Description: <em>{{ product.description }} </em></div>
+        <div> Price: <em>{{ product.price }} </em></div>
+        <div>
+            <img src="{{ product.product_image }}" alt="{{ product.product_image }}">
+        </div>
+
+    <div>
+        <a href="{% url 'eshop:store' %}">Back to product list</a>
+    </div>
+{% endblock %}
