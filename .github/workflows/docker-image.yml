@@ -16,4 +16,4 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: 
-        docker build Django_template/--file Dockerfile --tag my-image-name
+        docker build -f Django_template/Dockerfile -t my-image-name Django_template/
